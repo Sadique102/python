@@ -3,6 +3,7 @@ z = 1
 while z <= i:
     print("Good\nmorning")
     z = z + 1"""
+import math
 
 """x = input("Enter command: ")
 while x !="stop":
@@ -88,11 +89,14 @@ while new <= x:
     new += 1
     print(f"The factorial of the number {x} is {factorial}")"""
 
+#1
 """x = 1
 while x <=  1000:
     if x %  3 ==  0:
         print(x)
     x += 1"""
+
+#2
 """while True:
     x =  float(input("Enter inches: "))
     if x < 0:
@@ -104,6 +108,8 @@ while x <=  1000:
 
         print(y)"""
 
+
+#5
 """x = "python"
 y = "rules"
 attempts = 2
@@ -123,11 +129,166 @@ while i< 3 :
     print("HI")
     i += 1"""
 
+"""import random
+dice1 = dice2 = rolls = 0
+while (dice1!=6 or dice2!=6):
+    dice1 = random.randint(1,6)
+    dice2 = random.randint(1,6)
+    rolls = rolls + 1
+print(f"Rolled {rolls:d} times.")"""
+"""command = input("Enter command: ")
+while command!="":
+    if command=="MAYDAY":
+        break
+    print("Executing command: " + command)
+    command = input("Enter command: ")
+print("Execution stopped.")"""
+
+"""command = input("Enter command: ")
+while command!="stop":
+    if command=="MAYDAY":
+        break
+    print("Executing command: " + command)
+    command = input("Enter command: ")
+else:
+    print("Goodbye.")
+print("Execution stopped.")"""
+# Faulty program, infinite loop
+
+"""number = 1
+while number<5:
+    print(number)
+    number += 1
+
+# This part is never reached:
+print("All ready.")"""
+
+"""while True:
+    # Get user input for inches
+    inches = float(input("Enter a length in inches (or a negative value to exit): "))
+
+    # Check if the user wants to exit
+    if inches < 0:
+        print("Exiting the program.")
+        break
+
+    # Convert inches to centimeters
+    centimeters = inches * 2.54
+    # Display the result
+    print(f"{inches} inches is equal to {centimeters} centimeters")"""""
+# Faulty program, infinite loop
+
+#4
+"""import random
+secret_number = random.randint(1,6)
+guess  = int(input("Guess the number: "))
+while guess != secret_number:
+    if guess >  secret_number:
+        print("Too high")
+    #elif guess < secret_number:
+        #print("Too low")
+    else:
+        print("Too low ")
+    guess = int(input("Guess the number: "))
+
+print("correct")"""
+
+#5
+"""username = "python"
+password = "rules12"
+re_try = 0
+while re_try < 5:
+    u = input("Give the username?: ")
+    p = input("Give the password?: ")
+    if u == username and p == password:
+        print ("Welcome")
+        break
+    re_try += 1
+else:
+    print("Access denied")"""
+#2
+"""while True:
+    x = int(input("Enter the number: "))
+    if x < 0:
+        print("Ends")
+        break
+
+    y = x * 2.54
+    print (y)"""
+#3
+"""largest = None
+smallest = None
+while True:
+    s = input("number: ")
+    if s == "":
+        print("no number")
+        break
+    if largest is None or int(s) > largest:
+        largest = int(s)
+    if smallest is None or int(s) < smallest:
+        smallest = int(s)
+    print(smallest, largest)"""""
+"""pin = 1234
+x = input("Do you want to pay (yes/no): ")
+if x == "yes":
+    z =  int(input("Enter your pin"))
+    if z == pin:
+        print("Paid")
+    else:
+        n = 0
+        while n < 2:
+            print("Incorrect PIN. Please try again.")
+            z = int(input("Please re-enter your PIN code: "))
+            n += 1
+    if n == 2:
+        print("Payment canceled")
+elif x != "yes":
+    print("Access  denied")"""
+
+#6
+
+"""import random
+N = int(input("How many random points to generate?: "))
+n = 0
+i = 0
+while  i < N :
+    x = random.uniform(-1.0,1.0)
+    y = random.uniform(-1.0,1.0)
+
+    if x**2 + y**2 < 1.0:
+        n += 1
+
+    i += 1
+
+import math
+
+pi = 4.0 * n/N
+print(f"Pi is {pi}, error {math.pi - pi}")"""
 
 
+#3
 
 
+def main():
+    numbers = []
 
+
+    while True:
+        x = input("Enter a number or press Enter to quit: ")
+        if x == "":
+            break
+
+        number = float(x)
+        numbers.append(number)
+
+    if not numbers:
+        print("Invalid")
+    else:
+        print(f"The smallest number is {min(numbers)}")
+        print(f"The largest number is {max(numbers)}")
+
+
+main()
 
 
 

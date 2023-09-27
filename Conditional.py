@@ -6,7 +6,9 @@ if (x >= 18 or 15<= x and  y >=55):
 else:
     print("not ok")"""
 
-"""x = 42  # in centimeters
+
+#1
+"""x = 42
 y = float(input("The length: "))
 if x<= y :
     print("ok")
@@ -30,6 +32,8 @@ else:
         print("Your age is even")
     else:
         print("your age is odd")"""
+
+#2
 """cabin_class = input("Enter the cabin class (LUX, A, B, or C): ")
 
 if cabin_class == "LUX":
@@ -44,6 +48,8 @@ else:
         description = "Invalid cabin class."
 print(description)"""
 
+
+#3
 """x =  input("Enter your biological gender (male/female): ")
 y = float(input("Enter your hemoglobin value (g/l): "))
 
@@ -64,6 +70,7 @@ if  x ==  "male":
 else:
     print("Invalid")"""
 
+#4
 """year = int(input("Enter a year: "))
 if year  %  4 == 0:
     print (f"{year} is a leap year")
@@ -73,6 +80,7 @@ elif year % 400 == 0:
     print(f"{year} is a leap year")
 else:
     print(f"{year} is  not a leap year")"""
+
 
 
 
