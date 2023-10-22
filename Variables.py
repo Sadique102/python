@@ -1,20 +1,4 @@
-"""result = 16/5
-print(result)
-print(type(result))
-rounded_result = int(result)
-print(rounded_result)
-print(type(rounded_result))
-"""
-"""number = 9
-print(number)
-print("this is:", number)
-print(f"this is {number}")"""
 
-""""num = 3/200
-print(f"{num:3f} """""
-
-"""days= int(input("Enter Number of Days:" ))
-print(f"Seconds in that many Days:{days*24*3600}")"""
 
 #1
 """x = input("What's your name?: ")
@@ -134,4 +118,22 @@ a = z + (x * y)
 b = a / 7
 print("Weekly:", a)
 print("Daily:", b)"""
+
+"""result = 16/5
+print(result)
+print(type(result))
+rounded_result = int(result)
+print(rounded_result)
+print(type(rounded_result))
+"""
+"""number = 9
+print(number)
+print("this is:", number)
+print(f"this is {number}")"""
+
+""""num = 3/200
+print(f"{num:3f} """""
+
+"""days= int(input("Enter Number of Days:" ))
+print(f"Seconds in that many Days:{days*24*3600}")"""
 

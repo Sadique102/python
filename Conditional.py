@@ -1,10 +1,4 @@
-"""x = float(input("Enter your age: "))
-if 15<= x <18:
-    y = float(input("Enter your weight: "))
-if (x >= 18 or 15<= x and  y >=55):
-    print("ok")
-else:
-    print("not ok")"""
+
 
 
 #1
@@ -81,6 +75,14 @@ elif year % 400 == 0:
 else:
     print(f"{year} is  not a leap year")"""
 
+
+"""x = float(input("Enter your age: "))
+if 15<= x <18:
+    y = float(input("Enter your weight: "))
+if (x >= 18 or 15<= x and  y >=55):
+    print("ok")
+else:
+    print("not ok")"""
 
 
 

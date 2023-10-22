@@ -1,11 +1,4 @@
-"""names = []
 
-name = input("Enter your name or quit by enter: ")
-while name !="":
-    names.append(name)
-    name = input("Enter your name or quit by enter: ")
-for n in names:
-    print(f"Hello {n}!")"""
 
 #1
 """x = int(input("How many dice to roll?: "))
