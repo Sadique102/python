@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPS</title>
+    <style>
+        body{
+
+    background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.choiceBtn{
+    line-height: 30px;
+    width: 150px;
+}
+#gameDiv{
+    font-family: 'Consolas', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+    border: 3px solid;
+    border-radius: 25px;
+    padding: 10px;
+
+    background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+    text-align: center;
+}
+#playerText{
+    color: blue;
+}
+#computerText{
+    color: red;
+}
+p{
+
+    color:  orangered;
+    font-family: 'Consolas', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+}
+h2{
+    text-align: center;
+}
+    </style>
+</head>
+<body>
+<h2>Rock paper scissors</h2>
+<p>Rock wins against scissors; paper wins against rock; and scissors wins against paper.</p>
+    <div id="gameDiv">
+        <h1 class="gameText" id="playerText">Player: </h1>
+        <h1 class="gameText" id="computerText">Computer: </h1>
+        <h1 class="gameText" id="resultText">Result: </h1>
+
+        <button class="choiceBtn">ROCK</button>
+        <button class="choiceBtn">PAPER</button>
+        <button class="choiceBtn">SCISSORS</button>
+    </div>
+
+
+<script>
+    const playerText = document.querySelector("#playerText");
+    const computerText = document.querySelector("#computerText");
+    const resultText = document.querySelector("#resultText");
+    const choiceBtns = document.querySelectorAll(".choiceBtn");
+
+    choiceBtns.forEach(button => button.addEventListener("click", () => {
+        const playerChoice = button.textContent;
+
+        fetch('/play', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ player: playerChoice }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            playerText.textContent = `Player: ${data.player}`;
+            computerText.textContent = `Computer: ${data.computer}`;
+            resultText.textContent = `Result: ${data.result}`;
+        });
+    }));
+</script>
